@@ -16,6 +16,9 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 ROOT_PATH = os.path.dirname(__file__)
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,7 +28,7 @@ ROOT_PATH = os.path.dirname(__file__)
 SECRET_KEY = 'django-insecure-(^@6g^=2^aw605(&la@ufs-x%t%qg=hs1zql34d0lk()qr4s+i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -67,20 +70,23 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'result_pro_sys.urls'
 
-TEM_DIR='/home/ritik/college-proj/rps/templates'
+TEM_DIR=[os.path.join(BASE_DIR, 'templates')]
 
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEM_DIR],
-        'APP_DIRS': True,
+        'DIRS': TEM_DIR,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+            ],
+            'loaders': [
+            'django.template.loaders.app_directories.Loader',
+            'django.template.loaders.filesystem.Loader',
             ],
         },
     },
@@ -151,10 +157,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    '/var/www/static/',
-]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
