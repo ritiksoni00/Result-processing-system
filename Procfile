@@ -1,4 +1,4 @@
 
-web:gunicorn result_pro_sys.wsgi 
+web: gunicorn result_pro_sys.wsgi 
 
 
