@@ -108,6 +108,17 @@ DATABASES = {
         'HOST': '127.0.0.1',
         
         'PORT': '3306',
+    },
+    'postgresql': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        "server": "localhost",
+        "port": 5432,
+        "driver": "PostgreSQL",
+        "name": "rps",
+        "database": "rpss",
+        "askForPassword": False,
+        "username": "rtk",
+        "password": "toor"
     }
 }
 
