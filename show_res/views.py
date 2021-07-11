@@ -7,9 +7,6 @@ from add_res.models import Student, Semester, Grade
 def sh(request):
     return render(request, 'show/s.html')
 
-
-    
-
 def show_enrolled_stu_result(request):
         if 'en_no' in request.GET:
             en_no = request.GET['en_no']
