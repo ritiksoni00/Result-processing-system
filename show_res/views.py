@@ -2,21 +2,11 @@ from django.contrib import messages
 from django.shortcuts import redirect, render 
 from django.db.models import Avg, Sum
 from add_res.views import *
-
-
 from add_res.models import Student, Semester, Grade
-# Create your views here.
 
 def sh(request):
     return render(request, 'show/s.html')
 
-# def show_ogpa(request):
-#     if 'sem' & 'en_no' in request.GET:
-#         sem = request.GET['sem']
-#         if sem == 1:
-#             # return same ogpa as sgpa
-#             pass
-#         if sem > 1:
 
     
 
@@ -73,6 +63,3 @@ def show_enrolled_stu_result(request):
 
         return render(request, 'show/search_res.html')
 
-
-# def save_sgpa_and_show_ogpa(request):
-#     sgpa
