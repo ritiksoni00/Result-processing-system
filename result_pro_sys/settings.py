@@ -28,7 +28,7 @@ ROOT_PATH = os.path.dirname(__file__)
 SECRET_KEY = 'django-insecure-(^@6g^=2^aw605(&la@ufs-x%t%qg=hs1zql34d0lk()qr4s+i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
