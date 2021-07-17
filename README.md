@@ -6,7 +6,7 @@ this application is bsaed on django Web framework! fully functional(have some mi
   
   
   
-  
+   <a href ="https://rpssss.herokuapp.com/">Click here</a>
   
   :- a student information 
 
