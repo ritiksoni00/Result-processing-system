@@ -56,7 +56,7 @@ REST_FRAMEWORK = {
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+#     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -101,24 +101,13 @@ WSGI_APPLICATION = 'result_pro_sys.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'rps',
-        'USER': 'root',
-        'PASSWORD': 'toor',
-        'HOST': '127.0.0.1',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'vclrgmgr',
+        'USER': 'vclrgmgr',
+        'PASSWORD': 'vY-wVmfmNl1J-EdW6jnZwdsfty27xcUK',
+        'HOST': 'ella.db.elephantsql.com',
         
-        'PORT': '3306',
-    },
-    'postgresql': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        "server": "localhost",
-        "port": 5432,
-        "driver": "PostgreSQL",
-        "name": "rps",
-        "database": "rpss",
-        "askForPassword": False,
-        "username": "rtk",
-        "password": "toor"
+        'PORT': '5432',
     }
 }
 
